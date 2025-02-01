@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 bg-primary text-white">
+    <h1>Welcome to the Simple Blog</h1>
+    <p class="lead">Create and share your thoughts with the world.</p>
+    <div class="d-flex justify-content-center gap-3">
+        <a href="{{ url_for('login') }}" class="btn btn-light btn-lg px-4">Login</a>
+        <a href="{{ url_for('signup') }}" class="btn btn-secondary btn-lg px-4">Sign Up</a>
+    </div>
+</div>
+
+<!-- Featured Posts Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Featured Posts</h2>
+    <div class="row">
+        <!-- Featured Post 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light rounded">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post Image">
+                <div class="card-body">
+                    <h5 class="card-title">OUR FIRST APPLICATION</h5>
+                    <p class="card-text">A short excerpt of the blog post. Learn more about the first steps of building a blog application.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Post 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light rounded">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post Image">
+                <div class="card-body">
+                    <h5 class="card-title">Post Title 2</h5>
+                    <p class="card-text">A short excerpt of the blog post. Dive into the details of our journey and challenges.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Post 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light rounded">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Post Image">
+                <div class="card-body">
+                    <h5 class="card-title">Post Title 3</h5>
+                    <p class="card-text">A short excerpt of the blog post. Here’s a glimpse into another insightful piece of writing.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section (Additional Feature) -->
+<div class="container py-5 bg-light">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h3 class="text-center text-md-start">About Our Blog</h3>
+            <p class="lead text-center text-md-start">We are passionate about creating a space for people to express themselves. Our goal is to build a community of writers and readers who share ideas, stories, and opinions.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow" alt="About Us Image">
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter Section (Additional Feature) -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Subscribe to Our Newsletter</h2>
+    <p class="text-center mb-4">Stay updated with the latest posts, news, and more. Enter your email below to subscribe to our newsletter.</p>
+    <div class="d-flex justify-content-center">
+        <div class="input-group w-50">
+            <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address" aria-describedby="basic-addon2">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

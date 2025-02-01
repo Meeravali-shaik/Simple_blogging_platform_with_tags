@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">View Posts</h2>
+
+    <!-- Filter by Tags Section -->
+    <div class="filter-section mb-4">
+        <form method="GET" action="{{ url_for('view_posts') }}" class="d-flex justify-content-start">
+            <label for="tags" class="me-2">Filter by Tags:</label>
+            <select name="tag" id="tags" class="form-select w-auto">
+                <option value="">All Tags</option>
+                {% for tag in all_tags %}
+                    <option value="{{ tag }}" {% if tag == selected_tag %} selected {% endif %}>{{ tag }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary ms-3">Filter</button>
+        </form>
+    </div>
+
+    <div class="thread-container">
+        {% for post in posts %}
+        <div class="thread-card p-3 mb-4 border rounded">
+            <!-- Header: User and Post Title -->
+            <div class="d-flex align-items-center mb-2">
+                <div class="user-avatar bg-primary text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                    {{ post.username[0].upper() }}
+                </div>
+                <div class="ms-3">
+                    <h5 class="mb-0">{{ post.username }}</h5>
+                    <small class="text-muted">{{ post.title }}</small>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <p class="post-content">{{ post.content }}</p>
+            
+            <!-- Tags -->
+            {% if post.tags %}
+            <p class="tags"><strong>Tags:</strong> {{ post.tags | join(', ') }}</p>
+            {% endif %}
+
+            <!-- Actions: Like, Share -->
+            <div class="d-flex gap-2 mt-3">
+                <a href="{{ url_for('like_post', post_id=post.id) }}" class="btn btn-outline-primary btn-sm">
+                    Like ({{ post.likes }})
+                </a>
+                <a href="{{ url_for('share_post', post_id=post.id) }}" class="btn btn-outline-secondary btn-sm">
+                    Share ({{ post.shares }})
+                </a>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments mt-4">
+                <h6>Comments:</h6>
+                {% if post.comments %}
+                <ul class="list-unstyled">
+                    {% for comment in post.comments %}
+                    <li class="d-flex align-items-start mb-2">
+                        <div class="comment-avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;">
+                            C
+                        </div>
+                        <p class="ms-3 mb-0">{{ comment }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-muted">No comments yet.</p>
+                {% endif %}
+            </div>
+
+            <!-- Add a Comment -->
+            <form method="POST" action="{{ url_for('comment_post', post_id=post.id) }}" class="mt-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment..." required>
+                    <button type="submit" class="btn btn-success btn-sm">Post</button>
+                </div>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .thread-container {
+        max-width: 800px;
+        margin: auto;
+    }
+    .thread-card {
+        background: #f9f9f9;
+    }
+    .user-avatar {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .post-content {
+        font-size: 14px;
+        color: #333;
+    }
+    .tags {
+        font-size: 13px;
+        color: #555;
+    }
+    .comment-avatar {
+        font-size: 12px;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}

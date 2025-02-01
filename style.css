@@ -1,0 +1,310 @@
+/* General Body Styling */
+body {    background-image: url('bg.jpg');
+    background-size: cover; /* Ensures the image covers the entire page proportionally */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-position: center; /* Centers the image */
+    min-height: 100vh; /* Ensures the image covers the full viewport height */
+    margin: 0; /* Removes extra margins */
+     }
+    font-family: "Georgia", serif; /* Classic newspaper font */
+    background-color:#0cead9;
+     /* Light blue background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+
+}
+
+/* Header Styling */
+header {
+    background-color: #4682b4; /* Steel blue */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: "Times New Roman", serif; /* Classic newspaper header font */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container/* {
+    background-color: #d3fda1;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}*/
+    background-image: url(bg.jpg');
+    background-size: cover; /* Ensures the image covers the entire page proportionally */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-position: center; /* Centers the image */
+    min-height: 100vh; /* Ensures the image covers the full viewport height */
+    margin: 0; /* Removes extra margins */
+}
+
+/* Buttons */
+.btn {
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4682b4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a9bd4;
+}
+
+.btn-secondary {
+    background-color: #87ceeb;
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #b0e0e6;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #ffdb4d;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+/* Form Styling */
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: "Arial", sans-serif;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4682b4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(70, 130, 180, 0.5);
+}
+
+form button {
+    width: 100%;
+}
+
+/* Post and List Styling */
+.list-group-item {
+    background-color: #f8f9fa; /* Light grey for posts */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.list-group-item h5 {
+    font-family: "Times New Roman", serif;
+    font-size: 1.5rem;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-family: "Arial", sans-serif;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Sidebar Styling */
+#sidebar-wrapper {
+    background-color: #f8f9fa; /* Light grey background */
+    padding-top: 1rem;
+}
+
+#sidebar-wrapper .nav-link {
+    font-weight: bold;
+    text-align: center;
+}
+
+#sidebar-wrapper .nav-link.active {
+    background-color: #4682b4; /* Steel blue for active link */
+    color: white;
+}
+
+/* Toggle Button */
+[data-bs-toggle="collapse"] {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Main Content Styling */
+.flex-grow-1 {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+/* General background and font settings */
+/*body {
+    /*background-color: #f8f9f; /* Light grey background */
+   /* font-family: 'Arial', sans-serif;
+    color: #333;*/
+    body{  background-image: url(bg.jpg');
+    background-size: cover; /* Ensures the image covers the entire page proportionally */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-position: center; /* Centers the image */
+    min-height: 100vh; /* Ensures the image covers the full viewport height */
+    margin: 0; /* Removes extra margins */
+}
+
+
+/* Hero Section 
+.hero-section {
+    background-color: #ffd1dc; /* Light peach */
+    /*color: #2d6a4f; /* Dark green for text */
+    /*padding: 60px 0;
+}*/
+
+/* Card Section */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+/* Hide the checkbox */
+.sidebar-toggle input[type="checkbox"] {
+    display: none;
+}
+
+/* When the checkbox is checked, expand the sidebar */
+.sidebar-toggle input[type="checkbox"]:checked ~ #sidebar-wrapper {
+    width: 250px;
+}
+
+/* Collapse the sidebar on small screens (when the checkbox is unchecked) */
+#sidebar-wrapper {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Sidebar wrapper - this ensures that the sidebar occupies the full height of the screen */
+#sidebar-wrapper {
+    height: 100vh;
+}
+
+/* Label for the toggle button */
+#sidebarToggleLabel {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Ensure the sidebar stays visible on larger screens */
+@media (min-width: 992px) {
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    .sidebar-toggle input[type="checkbox"] {
+        display: none;
+    }
+}
+.body {
+    background-image: url('{{ url_for('static', filename='https://replit.com/@meeravalisk2999/A?mobileBridge=1&hideBottomBar=1&forceTheme=replitDark&errorTrace=d1ff4ebe-8341-446b-b81e-63e62030112d&mobileWebview=1&supportsUpsellBridge=1&permissionRequest=1#static/images/background.jpg
+        ) }}');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css');
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons a {
+    margin: 0 5px;

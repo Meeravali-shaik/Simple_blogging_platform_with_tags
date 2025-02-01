@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar-toggle">
+        <input type="checkbox" id="sidebarToggle" class="d-none">
+        <label for="sidebarToggle" class="btn btn-outline-primary mb-4 d-lg-none" id="sidebarToggleLabel">☰ Menu</label>
+    </div>
+
+    <div class="collapse d-lg-block bg-light border-end" id="sidebar-wrapper" style="width: 250px; height: 100vh;">
+        <div class="p-3">
+            <h4 class="text-center">Menu</h4>
+            <hr>
+            <ul class="nav flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="{{ url_for('home') }}" class="nav-link active">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('create_post') }}" class="nav-link">
+                        Create Post
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('view_posts') }}" class="nav-link">
+                        View Posts
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('manage_tags') }}" class="nav-link">
+                        Manage Tags
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('settings') }}" class="nav-link">
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('get_started') }}" class="nav-link text-danger">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-4">
+        <!-- Main content layout -->
+        <div class="content-wrapper">
+            <h2 class="text-center mb-4" style="font-size: 2rem;">Welcome to Simple Blog</h2>
+            <p class="text-center text-muted" style="font-size: 1.1rem;">Explore the blog's features and start creating posts!</p>
+
+            <!-- Central Buttons for Navigation -->
+            <div class="text-center mt-5">
+                <a href="{{ url_for('create_post') }}" class="btn btn-primary btn-lg mx-2" style="width: 200px;">Create Post</a>
+                <a href="{{ url_for('view_posts') }}" class="btn btn-secondary btn-lg mx-2" style="width: 200px;">View Posts</a>
+            </div>
+
+            <!-- Secondary Navigation Buttons -->
+            <div class="text-center mt-4">
+                <a href="{{ url_for('manage_tags') }}" class="btn btn-outline-primary btn-lg mx-2" style="width: 200px;">Manage Tags</a>
+                <a href="{{ url_for('settings') }}" class="btn btn-outline-secondary btn-lg mx-2" style="width: 200px;">Settings</a>
+                <a href="{{ url_for('get_started') }}" class="btn btn-dark btn-lg mx-2" style="width: 200px;">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
